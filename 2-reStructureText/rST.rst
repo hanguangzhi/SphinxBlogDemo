@@ -1,33 +1,33 @@
+=======================
+reStructuredText简介
+=======================
+跟其他轻量级标记语言一样，可以做到人和机器都比较好读。
 
-=============================
-这是rST部分
-==================
+参考资源：
 
-------------------
-这是rST部分这是rST部分
-这是rST部分
-这是rST部分
-这是rST部分
-这是rST部分
-这是rST部分
-这是rST部分
-这是rST部分
-这是rST部分这是rST部分
----------------
+* http://docutils.sourceforge.net/docs/user/rst/quickstart.html
+* http://docutils.sourceforge.net/0.6/docs/user/rst/quickref.html
+* http://docutils.sourceforge.net/docs/ref/rst/directives.html
+* http://zh-sphinx-doc.readthedocs.io/en/latest/rest.html
 
 
-=============================
-这是rST部分
-==================
 
-------------------
-这是rST部分这是rST部分
-这是rST部分
-这是rST部分
-这是rST部分
-这是rST部分
-这是rST部分
-这是rST部分
-这是rST部分
-这是rST部分这是rST部分
----------------
+工具：
+
+* 预览工具：http://rst.ninjs.org
+
+
+
+
+
+段落
+:: 
+
+    Whitespace, newlines, blank lines, and 
+    all kinds of markup (like *this* or 
+    \this) is preserved by literal blocks. 
+
+    The paragraph containing only '::' 
+    will be omitted from the result. 
+
+
