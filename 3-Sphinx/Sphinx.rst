@@ -57,14 +57,7 @@ Windows系统
         =======================
         我爱学习Sphinx
 
-#. 打开source文件中的 index.rst，将test.rst的文件添加至目录中，具体如下：
-
-    .. image:: images/add-toctree.png
-        :height: 200px
-        :width: 400 px
-        :alt: 添加至首页目录
-        
-        
+                
 #. 在Terminal中运行编译命令 ``sphinx-build -b html source build``
 
 #. 编译成功的话，在 *build* 文件夹中则有刚才发布的网站
@@ -94,6 +87,7 @@ Windows系统
 
 安装之后，再按照上述步骤，将 ``conf.py`` 中的主题行，修改为html_theme = 'sphinx_rtd_theme'，再运行 ``sphinx-build`` 命令重新发布即可。
 
+
 实现帮助文档公网可访问
 ==========================
 执行 ``sphinx-build`` 命令后，sphinx会将rst的内容，发布为静态网站。只需将 *build* 文件夹中的文件，托管至github，即可实现公网访问。
@@ -101,7 +95,8 @@ Windows系统
 
 由ReadtheDocs执行发布命令
 ===============================
-每次更新后，都需执行 ``sphinx-build`` 命令，并重新上传至Github，较为麻烦。这个工作可以由ReadTheDocs平台自动化完成。
+每次更新后，都需执行 ``sphinx-build`` 命令，并重新上传至Github，较为麻烦。
+这个工作可以由ReadTheDocs平台自动化完成。
 
 #. 注册ReadTheDocs账号
 #. 将Github账号关联到ReadtheDocs
@@ -111,17 +106,6 @@ Windows系统
 
 更多内容参见ReadtheDocs官方文档：https://docs.readthedocs.io/en/latest/getting_started.html
 
-**下次课内容**
-
-* reStructedText 
-* 自定义主题
-* 制作主题
-* 发布为PDF等其他样式
- 
-预习：
-
-* HTML，CSS
-* Jinjia 模板语言
 
 **参考资料**
 
