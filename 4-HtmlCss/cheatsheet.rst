@@ -302,28 +302,33 @@ CSS部分
 
 相信大家应该都知道了css选择器的概念并会使用了。下面就整理一些常用的样式设置。
 
+CSS在使用的时候有一个通用布局（全局）和局部布局的概念。
+- 通用布局：在整个项目中都会用到且一般不会在项目中进行样式更改的。这些样式设置我们一般会放在css文件的最顶部。
+- 局部布局：单个元素或单个标签或者单个页面文件都可以单独设置其属性。
+
 颜色和边框样式
 -----------
 
-- color: red; Element Colour - eg. red | #FF0000
-- background-color: white;    Background Colour of element
-- background-image: url(image.gif);   Background Colour of element
-- border-color: yellow;   Border Colour of element
-- border: 1px solid blue; Width, style and colour of border defined together
+- color: red; 元素颜色，值可以是（red|#FF0000）
+- background-color: white;  背景颜色
+- background-image: url(image.gif); 背景图片
+- border-color: yellow; 边框颜色
+- border: 1px solid blue; 边框宽度、样式和颜色（都有其他值可选）
+- border-radius: 5px; 圆角边框 
 
 文字样式设置
 ----------
 
-- text-align: left;   Horizontal Alignment - left | center | right
-- text-decoration: underline; Text Decorations - eg. none | underline | line-through
+- text-align: left; 文字对齐方式，值（left | center | right）
+- text-decoration: underline; 字体装饰 （none|underline |line-through）
 - font-family: fontname;  Font Face (Typeface) - eg. Verdana, Arial, Helvetica
 - font-size: 16pt;    Font Size or Height - eg. 12pt | 15px
 - font-weight: bold;  Font Weight (Boldness) - eg. bold | normal | 200
 
 大小和布局
 --------
-- width: 400px;   Width of HTML element - eg. 100px | 50%
-- height: 100%;   Height of HTML element - eg. 20px | 100%
+- width: 400px; 宽度（像素或百分比）
+- height: 100%; 高度（像素或百分比）
 - margin: 5px;    Margin - space around an element, or distance between two elements
 - margin-top: 1px;    Top Margin. Also try -bottom: -left: or -right:
 - padding: 5px;   Padding - distance between an elements contents and its border
@@ -332,4 +337,3 @@ CSS部分
 CSS列表
 ------
 - list-style: none;   Clear existing bullet types set by html list tags
-- text-decoriation: none;
