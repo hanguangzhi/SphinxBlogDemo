@@ -130,11 +130,11 @@ html部分
 ----
 
 - <ol> ... </ol>  有序列表
-- <ul> ... </ul>  无需列表
+- <ul> ... </ul>  无序列表
 - <li> ... </li>  列表元素（有序和无序）
 - <ol type="?">   有序列表类型: A, a, I, i, 1
 - <ol start="??"> 有序列表开始值
-- <ul type="?">   无需列表类型: disc, circle, square
+- <ul type="?">   无序列表类型: disc, circle, square
 - <li value="??"> 列表值 (改变当前或子列表的值)
 - <li type="??">  列表样式 (只改变当前item)
 - <dl> ... </dl>  内容列表
@@ -145,15 +145,52 @@ html部分
 Table表格
 --------
 
-每次更新后，都需执行 ``sphinx-build`` 命令，并重新上传至Github，较为麻烦。这个工作可以由ReadTheDocs平台自动化完成。
+- <table> ... </table>    Define a Table
+- <table> Tag Attributes::
+
+    - border="?"  Thickness of outside border
+    - bordercolor="#??????"   Border Colour
+    - cellspacing="?" Space between cells (pixels)
+    - cellpadding="?" Space between cell wall and content
+    - align="??"  Horizontal Alignment: left, center, right (*)
+    - bgcolor="#??????"   Background Colour (*)
+    - width="??"  Table Width (pixels or %) (*)
+    - height="??" Table Height (pixels or %) (*)
+
+- <tr> ... </tr>  Table Row within table
+- <th> ... </th>  Header Cell within table row
+- <td> ... </td>  Table Cell within table row
+- <td> Tag Attributes::
+
+    - colspan="?" Number of columns the cell spans across (cell merge)
+    - rowspan="?" Number of row a cell spans across (cell merge)
+    - width="??"  Cell Width (pixels or %) (*)
+    - height="??" Cell Height (pixels or %) (*)
+    - bgcolor="#??????"   Background Colour (*)
+    - align="??"  Horizontal Alignment: left, center, right (*)
+    - valign="??" Vertical Alignment: top, middle, bottom (*)
+    nowrap  Force no line breaks in a particular cell
 
 
 frame框架
 --------
 
-#. 注册ReadTheDocs账号
-#. 将Github账号关联到ReadtheDocs
-#. 将source文件中的内容，上传至github中的某个repo中
+- <frameset> ... </frameset>  Define the set of Frames
+- <frameset> Tag Attributes:   
+- rows="??,??, ..."   Define row sizes & number of rows (size in pixels or %)
+- cols="??,??, ..."   Define column sizes & number of columns (size in pixels or %)
+- noresize="noresize" User cannot resize any frames in frameset
+- <frame> ... </frame>    Define a frame within the frameset
+- <frame> Tag Attributes:  
+- src="url"   Location of HTML File for a frame
+- name="***"  Unique name of frame window
+- marginwidth="?" Horizontal margin spacing inside frame (pixels)
+- marginheight="?"    Vertical margin spacing inside frame (pixels)
+- noresize="noresize" Declare all frameset sizes as fixed
+- scrolling="***" Can the user scroll inside the frame: yes, no, auto
+- frameborder="?" Frame Border: (1=yes, 2=no)
+- bordercolor="#??????"   Border Colour (*)
+- <noframes> ... </noframes>  Unframed content (for browsers not supporting frames)
 
 
 表单
@@ -200,14 +237,13 @@ frame框架
 
 特殊符号
 ------
-- &lt;  < - Less-Than Symbol
-- &gt;    > - Greater-Than Symbol
-- &amp;   & - Ampersand, or 'and' sign
-- &quot;  " - Quotation Mark
-- &copy;  © - Copyright Symbol
-- &trade; ™ - Trademark Symbol
-- &nbsp;    - A space (non-breaking space)
-- &#??;   ISO 8859-1 character - replace ?? with the iso code
+- &lt;  < 小于
+- &gt;    > 大于
+- &amp;   & 
+- &quot;  " 
+- &copy;  © 
+- &trade; ™ 
+- &nbsp;  空白
 
 
 body背景及颜色设置
@@ -215,13 +251,51 @@ body背景及颜色设置
 
 - <body> 属性值 ::
 
-    - background="url"    Background Image (*)
-    - bgcolor="#??????"   Background Colour (*)
-    - text="#??????"  Document Text Colour (*)
-    - link="#??????"  Link Colour (*)
-    - vlink="#??????" Visited Link Colour (*)
-    - alink="#??????" Active Link Colour (*)
-    - bgproperties="fixed"
-    - Background Properties - "Fixed" = non-scrolling watermark (*)
-    - leftmargin="?"  Side Margin Size in Pixels (Internet Explorer) (*)
-    - topmargin="?"   Top Margin Size in Pixels (Internet Explorer) (*)
+    - background="url"  背景图片 (*)
+    - bgcolor="#??????"   背景颜色 (*)
+    - text="#??????"  文字颜色 (*)
+    - link="#??????"  未访问链接颜色 (*)
+    - vlink="#??????" 已访问链接颜色 (*)
+    - alink="#??????" 鼠标点击超链接时的颜色 (*)
+    - bgproperties="fixed" 背景固定，不随鼠标滚动而变化
+    - margin="?" 设置外边距（像素）
+    - padding="?" 设置内边距（像素）
+
+
+CSS部分
+=======
+层叠样式表(Cascading Style Sheets)是一种用来表现HTML或XML等文件样式的计算机语言。CSS不仅可以静态地修饰网页，还可以配合各种脚本语言动态地对网页各元素进行格式化。能够对网页中元素位置的排版进行像素级精确控制，支持几乎所有的字体字号样式，拥有对网页对象和模型样式编辑的能力。
+
+使用方式（共4种，常用的为3种）
+------------------------
+#. 引入独立css文件方式::
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css" title="style">
+    </head>
+
+#. html内部引用方式::
+
+    <head>
+        <style type="text/css">
+         h1 {
+            color:red;
+            }
+        </style>
+    </head>
+
+#. html行内引用::
+
+    <p style="color:red;">Some red text</p>
+
+#. 引入外部样式表::
+
+    @import url(sheet.css);
+    引入css文件到当下css文件中，且只能引入css文件。@import只能位于文件的顶部
+
+
+.. note:: 
+
+    CSS优先级：行内 > 内部引用 > 外部引用
+    当在一个样式声明中使用一个!important 规则时，此声明将覆盖任何其他声明。
+    CSS中也有继承的概念。
