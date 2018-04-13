@@ -299,3 +299,37 @@ CSS部分
     CSS优先级：行内 > 内部引用 > 外部引用
     当在一个样式声明中使用一个!important 规则时，此声明将覆盖任何其他声明。
     CSS中也有继承的概念。
+
+相信大家应该都知道了css选择器的概念并会使用了。下面就整理一些常用的样式设置。
+
+颜色和边框样式
+-----------
+
+- color: red; Element Colour - eg. red | #FF0000
+- background-color: white;    Background Colour of element
+- background-image: url(image.gif);   Background Colour of element
+- border-color: yellow;   Border Colour of element
+- border: 1px solid blue; Width, style and colour of border defined together
+
+文字样式设置
+----------
+
+- text-align: left;   Horizontal Alignment - left | center | right
+- text-decoration: underline; Text Decorations - eg. none | underline | line-through
+- font-family: fontname;  Font Face (Typeface) - eg. Verdana, Arial, Helvetica
+- font-size: 16pt;    Font Size or Height - eg. 12pt | 15px
+- font-weight: bold;  Font Weight (Boldness) - eg. bold | normal | 200
+
+大小和布局
+--------
+- width: 400px;   Width of HTML element - eg. 100px | 50%
+- height: 100%;   Height of HTML element - eg. 20px | 100%
+- margin: 5px;    Margin - space around an element, or distance between two elements
+- margin-top: 1px;    Top Margin. Also try -bottom: -left: or -right:
+- padding: 5px;   Padding - distance between an elements contents and its border
+- padding-top: 1px;   Top Padding. Also try -bottom: -left: or -right:
+
+CSS列表
+------
+- list-style: none;   Clear existing bullet types set by html list tags
+- text-decoriation: none;
