@@ -3,7 +3,10 @@ Html5 + CSS3 CheatSheet整理
 ==========================
 
 Html5和Css3是万维网标准通用标记语言下的一个应用超文本标记语言的第5次修改，相比于html4增添了许多新特性。整理了一些常用的东西，希望能帮助大家。
-参考文婷发给的网址：http://www.simplehtmlguide.com/cheatsheet.php
+
+**参考资料**
+
+[文婷分享的链接]http://www.simplehtmlguide.com/cheatsheet.php
 
 网页模版
 =======
@@ -74,42 +77,69 @@ html部分
 
 块划分
 -----
-#. 浏览至 *source* 文件夹，并在其根目录下创建新文件夹demo
-#. 在上方 *demo* 文件夹中，新建test.rst文件，并在其中输入如下内容：
+- <div> ... </div> ::
+    
+        定义文档中的分区或块或节，可以把文档分割为独立不同的部分。
+        可以用id或class来定义标记，使得此标签更有效。
+        但是也不必为每个div都加id或class
 
-::
+- <span> ... </span>  文字内容划分
+- <p> ... </p>  文字段划分
+- <br> 行划分（换行）
+- <hr> 水平线 ::
 
-        =======================
-        这是Sphinx的测试
-        =======================
-        我爱学习Sphinx
-
-
-
-
-图片
-----
-
-#. 打开 *source* 文件夹中的conf.py，并找到主题配置行 html_theme = 'alabaster'
-#. 从内置主题中挑选需要的主题，如 bizstyle，将其改为 html_theme = 'bizstyle'
+    属性值     
+    - size="?"  水平线像素厚度
+    - width="?"  像素宽度
+    - width="??%" 像素百分比
+    - color="#??????" 颜色定义
+    - align="?" 水平位置
+    - 没有阴影、3D和切割属性
+    - <nobr> ... </nobr> 线换行
 
 
 
-链接
-----
+图片IMG
+------
 
-如果喜欢 `readthedocs.org <https://docs.readthedocs.io/en/latest/getting_started.html>`_ 的主题，可以按照如下方式安装
+- <img src="url" alt="text"> 图片基础属性
+- <img> 标签属性 ::
 
-.. code-block:: python
+    - src="url"   URL或图片名(必须)
+    - alt="text"  可选文字 
+    - align="?"   图片嵌入方式
+    - width="??"  宽度 (像素或百分比)
+    - height="??" 高度 (像素或百分比)
+    - border="??" 边宽 (像素)
 
-    pip install sphinx_rtd_theme
 
-安装之后，再按照上述步骤，将 ``conf.py`` 中的主题行，修改为html_theme = 'sphinx_rtd_theme'，再运行 ``sphinx-build`` 命令重新发布即可。
+
+链接（锚元素）
+----------
+
+- <a href="url"> link text </a> 基础a标签
+<a> 标签属性 ::
+
+    - href="url"  链接指向url
+    - name="??"   链接地址名称
+    - target="?"  链接页面打开方式: _self当前页跳转, _blank新页面打开(常用的两种方式).
+    - href="url#bookmark" 链接到#id位置(锚点定位).
+    - href="mailto:email" 邮件发送
 
 列表
 ----
 
-执行 ``sphinx-build`` 命令后，sphinx会将rst的内容，发布为静态网站。只需将 *build* 文件夹中的文件，托管至github，即可实现公网访问。
+- <ol> ... </ol>  有序列表
+- <ul> ... </ul>  无需列表
+- <li> ... </li>  列表元素（有序和无序）
+- <ol type="?">   有序列表类型: A, a, I, i, 1
+- <ol start="??"> 有序列表开始值
+- <ul type="?">   无需列表类型: disc, circle, square
+- <li value="??"> 列表值 (改变当前或子列表的值)
+- <li type="??">  列表样式 (只改变当前item)
+- <dl> ... </dl>  内容列表
+- <dt> ... </dt>  定义的term或phrase
+- <dd> ... </dd>  详细内容
 
 
 Table表格
@@ -129,29 +159,69 @@ frame框架
 表单
 ----
 
-#. 选择github的相应ropo，自动创建webhook
-#. 后续每次源文件内容有变化后，ReadtheDoc均可以自动发布最新的版本
+- <form> ... </form>  Form input group decleration
+- <form> Tag Attributes::  
+
+    - action="url"    URL of Form Script
+    - method="***"    Method of Form: get, post
+    - enctype="***"   For File Upload: enctype="multipart/form-data"
+
+- <input> ... </input>    Input field within form
+- <input> Tag Attributes::  
+
+    - type="***"  Input Field Type: text, password, checkbox, submit etc.
+    - name="***"  Form Field Name (for form processing script)
+    - value="***" Value of Input Field
+    - size="***"  Field Size
+    - maxlength="?"   Maximum Length of Input Field Data
+    checked Mark selected field in radio button group or checkbox
+
+- <select> ... </select>  Select options from drop down list
+- <select> Tag Attributes::    
+
+    - name="***"  Drop Down Combo-Box Name (for form processing script)
+    - size="?"    Number of selectable options
+    - multiple    Allow multiple selections
+
+- <option> ... </option>  Option (item) within drop down list
+- <option> Tag Attributes::
+
+    - value="***" Option Value
+    - selected    Set option as default selected option
+
+- <textarea> ... </textarea>  Large area for text input
+- <textarea> Tag Attributes::
+
+    - name="***"  Text Area Name (for form processing script)
+    - rows="?"    Number of rows of text shown
+    - cols="?"    Number of columns (characters per rows)
+    - wrap="***"  Word Wrapping: off, hard, soft
 
 
 特殊符号
 ------
-
-更多内容参见ReadtheDocs官方文档：https://docs.readthedocs.io/en/latest/getting_started.html
+- &lt;  < - Less-Than Symbol
+- &gt;    > - Greater-Than Symbol
+- &amp;   & - Ampersand, or 'and' sign
+- &quot;  " - Quotation Mark
+- &copy;  © - Copyright Symbol
+- &trade; ™ - Trademark Symbol
+- &nbsp;    - A space (non-breaking space)
+- &#??;   ISO 8859-1 character - replace ?? with the iso code
 
 
 body背景及颜色设置
 ---------------
 
-* reStructedText 
-* 自定义主题
-* 制作主题
-* 发布为PDF等其他样式
- 
-预习：
+- <body> 属性值 ::
 
-* HTML，CSS
-* Jinjia 模板语言
-
-**参考资料**
-
-[Sphinx官方教程]: http://www.sphinx-doc.org/en/master/usage/quickstart.html
+    - background="url"    Background Image (*)
+    - bgcolor="#??????"   Background Colour (*)
+    - text="#??????"  Document Text Colour (*)
+    - link="#??????"  Link Colour (*)
+    - vlink="#??????" Visited Link Colour (*)
+    - alink="#??????" Active Link Colour (*)
+    - bgproperties="fixed"
+    - Background Properties - "Fixed" = non-scrolling watermark (*)
+    - leftmargin="?"  Side Margin Size in Pixels (Internet Explorer) (*)
+    - topmargin="?"   Top Margin Size in Pixels (Internet Explorer) (*)
