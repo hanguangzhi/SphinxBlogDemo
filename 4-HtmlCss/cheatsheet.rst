@@ -145,94 +145,73 @@ html部分
 Table表格
 --------
 
-- <table> ... </table>    Define a Table
-- <table> Tag Attributes::
+- <table> ... </table> 定义表格
+- <table> 属性::
 
-    - border="?"  Thickness of outside border
-    - bordercolor="#??????"   Border Colour
-    - cellspacing="?" Space between cells (pixels)
-    - cellpadding="?" Space between cell wall and content
-    - align="??"  Horizontal Alignment: left, center, right (*)
-    - bgcolor="#??????"   Background Colour (*)
-    - width="??"  Table Width (pixels or %) (*)
-    - height="??" Table Height (pixels or %) (*)
+    - border="?"  外边框宽度
+    - bordercolor="#??????"   边框颜色
+    - cellspacing="?" 单元格见空隙(像素)
+    - cellpadding="?" 单元格与内容间的空间
+    - align="??" 对齐方式（left, center, right）
+    - bgcolor="#??????" 表格背景颜色
+    - width="??"  表格宽度(像素或百分比)
+    - height="??" 表格高度 (像素或百分比)
 
-- <tr> ... </tr>  Table Row within table
-- <th> ... </th>  Header Cell within table row
-- <td> ... </td>  Table Cell within table row
-- <td> Tag Attributes::
+- <tr> ... </tr>  列
+- <th> ... </th>  列标题
+- <td> ... </td>  列内单元格
+- <td> 属性::
 
-    - colspan="?" Number of columns the cell spans across (cell merge)
-    - rowspan="?" Number of row a cell spans across (cell merge)
-    - width="??"  Cell Width (pixels or %) (*)
-    - height="??" Cell Height (pixels or %) (*)
-    - bgcolor="#??????"   Background Colour (*)
-    - align="??"  Horizontal Alignment: left, center, right (*)
-    - valign="??" Vertical Alignment: top, middle, bottom (*)
-    nowrap  Force no line breaks in a particular cell
-
-
-frame框架
---------
-
-- <frameset> ... </frameset>  Define the set of Frames
-- <frameset> Tag Attributes:   
-- rows="??,??, ..."   Define row sizes & number of rows (size in pixels or %)
-- cols="??,??, ..."   Define column sizes & number of columns (size in pixels or %)
-- noresize="noresize" User cannot resize any frames in frameset
-- <frame> ... </frame>    Define a frame within the frameset
-- <frame> Tag Attributes:  
-- src="url"   Location of HTML File for a frame
-- name="***"  Unique name of frame window
-- marginwidth="?" Horizontal margin spacing inside frame (pixels)
-- marginheight="?"    Vertical margin spacing inside frame (pixels)
-- noresize="noresize" Declare all frameset sizes as fixed
-- scrolling="***" Can the user scroll inside the frame: yes, no, auto
-- frameborder="?" Frame Border: (1=yes, 2=no)
-- bordercolor="#??????"   Border Colour (*)
-- <noframes> ... </noframes>  Unframed content (for browsers not supporting frames)
+    - colspan="?" 行单元格合并数量 (合并单元格)
+    - rowspan="?" 列单元格合并数量 (合并单元格)
+    - width="??"  单元格宽度 (像素或百分比) (*)
+    - height="??" 单元格高度 (像素或百分比) (*)
+    - bgcolor="#??????"   单元格颜色设置 (*)
+    - align="??"  水平对齐方式（左中右）
+    - valign="??" 垂直对齐方式（上中下）
+    - nowrap  在单元格内强制不换行
 
 
 表单
 ----
 
-- <form> ... </form>  Form input group decleration
-- <form> Tag Attributes::  
+- <form> ... </form>  定义form表单
+- <form> 属性值::  
 
-    - action="url"    URL of Form Script
-    - method="***"    Method of Form: get, post
-    - enctype="***"   For File Upload: enctype="multipart/form-data"
+    - action="url"    规定当提交表单时，向何处发送表单数据
+    - method="***"    规定如何发送表单: get, post
 
-- <input> ... </input>    Input field within form
-- <input> Tag Attributes::  
+- <input> ... </input>   输入框
+- <input> 属性::  
 
-    - type="***"  Input Field Type: text, password, checkbox, submit etc.
-    - name="***"  Form Field Name (for form processing script)
-    - value="***" Value of Input Field
-    - size="***"  Field Size
-    - maxlength="?"   Maximum Length of Input Field Data
-    checked Mark selected field in radio button group or checkbox
+    - type="***"  输入框类型（text, password, checkbox, submit etc）
+    - name="***"  规定input的名称，方便后期数据引用 
+    - value="***" 输入框的值
+    - size="***"  输入框大小
+    - maxlength="?"  输入数据的最大长度
+    - checked   标记选中的组合按钮和复选框
 
-- <select> ... </select>  Select options from drop down list
-- <select> Tag Attributes::    
+- <select> ... </select>  下拉选择表单
+- <select> 属性值::    
 
-    - name="***"  Drop Down Combo-Box Name (for form processing script)
-    - size="?"    Number of selectable options
-    - multiple    Allow multiple selections
+    - name="***"  下拉菜单名称，方便后期数据引用
+    - size="?"    选项个数
+    - multiple    允许多选
 
-- <option> ... </option>  Option (item) within drop down list
-- <option> Tag Attributes::
+- <option> ... </option>  在下拉列表里选择
+- <option> 属性::
 
-    - value="***" Option Value
-    - selected    Set option as default selected option
+    - value="***" 选择值
+    - selected    设置默认选择
 
-- <textarea> ... </textarea>  Large area for text input
-- <textarea> Tag Attributes::
+- <textarea> ... </textarea> 文本域
+- <textarea> 属性值::
 
-    - name="***"  Text Area Name (for form processing script)
-    - rows="?"    Number of rows of text shown
-    - cols="?"    Number of columns (characters per rows)
-    - wrap="***"  Word Wrapping: off, hard, soft
+    - name="***"  文本域名称，方便后期数据引用
+    - rows="?"    文本域内可见行数
+    - cols="?"    规定文本区的宽度（字符个数）
+    - wrap="***"  规定当在表单中提交时，文本区域中的文本如何换行（hard|soft）
+    - required 必填项
 
 
 特殊符号
@@ -296,15 +275,15 @@ CSS部分
 
 .. note:: 
 
-    CSS优先级：行内 > 内部引用 > 外部引用
+    CSS优先级：行内 > 内部引用 > 外部引用。
     当在一个样式声明中使用一个!important 规则时，此声明将覆盖任何其他声明。
-    CSS中也有继承的概念。
+    另外，CSS中也有样式继承的概念。
 
 相信大家应该都知道了css选择器的概念并会使用了。下面就整理一些常用的样式设置。
 
 CSS在使用的时候有一个通用布局（全局）和局部布局的概念。
-- 通用布局：在整个项目中都会用到且一般不会在项目中进行样式更改的。这些样式设置我们一般会放在css文件的最顶部。
-- 局部布局：单个元素或单个标签或者单个页面文件都可以单独设置其属性。
+#. 通用布局：在整个项目中都会用到且一般不会在项目中进行样式更改的。这些样式设置我们一般会放在css文件的最顶部。
+#. 局部布局：单个元素或单个标签或者单个页面文件都可以单独设置其属性。
 
 颜色和边框样式
 -----------
@@ -320,20 +299,20 @@ CSS在使用的时候有一个通用布局（全局）和局部布局的概念�
 ----------
 
 - text-align: left; 文字对齐方式，值（left | center | right）
-- text-decoration: underline; 字体装饰 （none|underline |line-through）
-- font-family: fontname;  Font Face (Typeface) - eg. Verdana, Arial, Helvetica
-- font-size: 16pt;    Font Size or Height - eg. 12pt | 15px
-- font-weight: bold;  Font Weight (Boldness) - eg. bold | normal | 200
+- text-decoration: underline; 字体装饰（none|underline |line-through）
+- font-family: fontname;  字族（如：微软雅黑，Verdana, Arial, Helvetica）
+- font-size: 16pt;  字体大小（可用磅和像素表示，如12pt | 15px）
+- font-weight: bold; 字体粗细（值：bold | normal | 200） 
 
 大小和布局
 --------
 - width: 400px; 宽度（像素或百分比）
 - height: 100%; 高度（像素或百分比）
-- margin: 5px;    Margin - space around an element, or distance between two elements
-- margin-top: 1px;    Top Margin. Also try -bottom: -left: or -right:
-- padding: 5px;   Padding - distance between an elements contents and its border
-- padding-top: 1px;   Top Padding. Also try -bottom: -left: or -right:
+- margin: 5px; 元素外边距（可一次设置4个值，如：margin: 5px 4px 6px 7px - 位置对应 上右下左 顺时针边距）
+- margin-top: 1px; 元素之间上边距
+- padding: 5px; 块元素内部边距，用法与margin类似
+- padding-top: 1px; 
 
 CSS列表
 ------
-- list-style: none;   Clear existing bullet types set by html list tags
+- list-style: none; 列表样式（无圆点等装饰）
