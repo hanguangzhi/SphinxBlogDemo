@@ -6,7 +6,7 @@ Html5和Css3是万维网标准通用标记语言下的一个应用超文本标�
 
 **参考资料**
 
-[文婷分享的链接]http://www.simplehtmlguide.com/cheatsheet.php
+[小P分享的链接]http://www.simplehtmlguide.com/cheatsheet.php
 
 网页模版
 =======
@@ -51,7 +51,7 @@ html部分
 - <a href="url"> 链接 </a> 创建链接
 - <div> 块 </div> 块布局
 - <img src="filename.jpg">  展示图片
-- <ul> <li> 列表 </li> </ul> 无需列表，前面是原点
+- <ul> <li> 列表 </li> </ul> 无需列表，前面是圆点
 - <br> 换行
 - <span style="color:red"> red </span> 使用内置样式
 
