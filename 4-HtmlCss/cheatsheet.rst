@@ -131,7 +131,9 @@ html部分
     - href="mailto:email" 邮件发送
 	
 - :hover 选择器用于选择鼠标指针浮动在上面的元素，它可用于所有元素，不只是链接，可以是图片、文字等。
-- a:hover可以用来设置鼠标指针浮动在超链接上时的css，示例::
+- 举一个常用伪类:hover的例子 ::
+
+		a:hover可以用来设置鼠标指针浮动在超链接上时的css，示例::
 
 		<style>
 		a:hover{font-size:15px;color:#8c0000;}
