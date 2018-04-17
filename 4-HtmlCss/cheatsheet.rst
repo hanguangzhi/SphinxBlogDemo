@@ -129,6 +129,18 @@ html部分
     - target="?"  链接页面打开方式: _self当前页跳转, _blank新页面打开(常用的两种方式).
     - href="url#bookmark" 链接到#id位置(锚点定位).
     - href="mailto:email" 邮件发送
+	
+- :hover 选择器用于选择鼠标指针浮动在上面的元素，它可用于所有元素，不只是链接，可以是图片、文字等。
+- a:hover可以用来设置鼠标指针浮动在超链接上时的css，示例::
+
+		<style>
+		a:hover{font-size:15px;color:#8c0000;}
+		</style>
+		
+		<div><a href="https://www.baidu.com">百度一下</a></div>
+		
+		当鼠标指针指向“百度一下”这几个字时，字体大小会变为15px，颜色变为北大红.
+		
 
 列表
 ----
