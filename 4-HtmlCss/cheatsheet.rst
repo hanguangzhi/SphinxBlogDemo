@@ -294,7 +294,21 @@ CSS在使用的时候有一个通用布局（全局）和局部布局的概念�
 - background-image: url(image.gif); 背景图片
 - border-color: yellow; 边框颜色
 - border: 1px solid blue; 边框宽度、样式和颜色（都有其他值可选）
-- border-radius: 5px; 圆角边框 
+- border-radius: 5px; 圆角边框
+
+.. note::
+
+	color颜色的值，可以使red和#xxxx以及rgb(255,255,255)这三种形式。
+	
+	区别：
+		red、blue、green等表示颜色的单词作为值时，等同于三个特定的#xxxxxx值。
+		
+		#xxxxxx和rgb(255,255,255)这两种形式的值可以表示色板中任意颜色值。
+		
+		另外还有一种颜色表示方法，rgba，其中a是alpha表示透明度
+		
+		样例：color：rgba(0,0,0,0.1)表示透明度为0.1的黑色。大家可以手动试一下。
+
 
 文字样式设置
 ----------
