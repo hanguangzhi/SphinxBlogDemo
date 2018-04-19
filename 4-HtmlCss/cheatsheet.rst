@@ -6,7 +6,7 @@ Html5和Css3是万维网标准通用标记语言下的一个应用超文本标�
 
 **参考资料**
 
-[文婷分享的链接]http://www.simplehtmlguide.com/cheatsheet.php
+[小P分享的链接]http://www.simplehtmlguide.com/cheatsheet.php
 
 网页模版
 =======
@@ -51,7 +51,7 @@ html部分
 - <a href="url"> 链接 </a> 创建链接
 - <div> 块 </div> 块布局
 - <img src="filename.jpg">  展示图片
-- <ul> <li> 列表 </li> </ul> 无需列表，前面是原点
+- <ul> <li> 列表 </li> </ul> 无需列表，前面是圆点
 - <br> 换行
 - <span style="color:red"> red </span> 使用内置样式
 
@@ -83,7 +83,11 @@ html部分
         可以用id或class来定义标记，使得此标签更有效。
         但是也不必为每个div都加id或class
 
-- <span> ... </span>  文字内容划分
+- <span> ... </span>  文字内容划分 ::
+
+		span属于块元素，如果想对span内的文字进行样式设置，比如对齐方式的设置，
+		需要添加display：block将其转化为块元素，否则对齐设置无法生效。
+
 - <p> ... </p>  文字段划分
 - <br> 行划分（换行）
 - <hr> 水平线 ::
@@ -125,6 +129,20 @@ html部分
     - target="?"  链接页面打开方式: _self当前页跳转, _blank新页面打开(常用的两种方式).
     - href="url#bookmark" 链接到#id位置(锚点定位).
     - href="mailto:email" 邮件发送
+	
+- :hover 选择器用于选择鼠标指针浮动在上面的元素，它可用于所有元素，不只是链接，可以是图片、文字等。
+- 举一个常用伪类:hover的例子 ::
+
+		a:hover可以用来设置鼠标指针浮动在超链接上时的css，示例::
+
+		<style>
+		a:hover{font-size:15px;color:#8c0000;}
+		</style>
+		
+		<div><a href="https://www.baidu.com">百度一下</a></div>
+		
+		当鼠标指针指向“百度一下”这几个字时，字体大小会变为15px，颜色变为北大红.
+		
 
 列表
 ----
@@ -294,7 +312,21 @@ CSS在使用的时候有一个通用布局（全局）和局部布局的概念�
 - background-image: url(image.gif); 背景图片
 - border-color: yellow; 边框颜色
 - border: 1px solid blue; 边框宽度、样式和颜色（都有其他值可选）
-- border-radius: 5px; 圆角边框 
+- border-radius: 5px; 圆角边框
+
+.. note::
+
+	color颜色的值，可以使red和#xxxx以及rgb(255,255,255)这三种形式。
+	
+	区别：
+		red、blue、green等表示颜色的单词作为值时，等同于三个特定的#xxxxxx值。
+		
+		#xxxxxx和rgb(255,255,255)这两种形式的值可以表示色板中任意颜色值。
+		
+		另外还有一种颜色表示方法，rgba，其中a是alpha表示透明度
+		
+		样例：color：rgba(0,0,0,0.1)表示透明度为0.1的黑色。大家可以手动试一下。
+
 
 文字样式设置
 ----------
